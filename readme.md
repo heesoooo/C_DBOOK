@@ -1,5 +1,9 @@
 ## admin폴더 경우 (개발작업시 dist 폴더의 산출물 확인하세요.)
 
+## URL 확인
+* https://heesoooo.github.io/C_DBOOK/admin/list.html
+* https://heesoooo.github.io/C_DBOOK/brand/brand.html
+
 ## 1. Node.js 설치
 gulp를 사용하기 위해서 node.js 를 다운로드 받기
 

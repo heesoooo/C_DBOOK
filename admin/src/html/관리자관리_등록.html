@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>관리자관리_등록</title>
+	@@include('include/inc_html_head.html')
+</head>
+<body>	 
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			@@include('include/inc_header.html')
+			<!-- /header -->
+			
+			<!-- lnb & location -->
+			@@include('include/inc_left.html')
+			<!-- /lnb & location -->
+
+				<table class="tbl_view mt10 mb10">
+					<caption></caption>
+					<colgroup>
+						<col style="width:20%">
+						<col style="width:80%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">아이디 <sup class="necessary">*</sup></th>
+							<td>
+								<input type="text" placeholder="아이디를 입력하세요." style="width: 70%">
+								<p class="strength">아이디를 입력해주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">이름 <sup class="necessary">*</sup></th>
+							<td>
+								<input type="text" placeholder="이름을 입력하세요." style="width: 70%">
+								<p class="strength">이름을 입력해주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">비밀번호 <sup class="necessary">*</sup></th>
+							<td>
+								<input type="text" placeholder="비밀번호를 입력하세요." style="width: 70%">
+								<p class="strength">비밀번호를 입력해주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">관리자 등급</th>
+							<td>
+								<div class="radio_type">
+									<input type="radio" id="type1_1" name="type1" checked>
+									<label for="type1_1">최고관리자</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="type1_2" name="type1">
+									<label for="type1_2">일반관리자</label>
+								</div>
+                                <div class="radio_type">
+									<input type="radio" id="type1_3" name="type1">
+									<label for="type1_3">정보보안관리자</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">상태</th>
+							<td>
+								<div class="radio_type">
+									<input type="radio" id="type2_1" name="type2" checked>
+									<label for="type2_1">승인</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="type2_2" name="type2">
+									<label for="type2_2">거부</label>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+	
+				<!-- button -->
+				<div class="btn_right clearFix mt10 mb10">
+					<a class="btn btn_ty7" href="#">등록</a>
+					<a class="btn btn_ty7" href="#">취소</a>
+				</div>
+				<!-- //button -->	                    
+			</div>
+		</div>
+	</div>
+</body>
+</html>

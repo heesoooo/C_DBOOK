@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>no data</title>
+	@@include('include/inc_html_head.html')
+</head>
+<body>	 
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			@@include('include/inc_header.html')
+			<!-- /header -->
+			
+			<!-- lnb & location -->
+			@@include('include/inc_left.html')
+			<!-- /lnb & location -->
+
+				<!-- 검색 결과가 없는 경우 -->
+				<div class="no_data">
+					<p>검색 결과가 없습니다.</p>
+				</div>
+				<!-- /검색 결과가 없는 경우 -->
+
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

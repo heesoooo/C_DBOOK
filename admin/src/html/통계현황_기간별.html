@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>가입자현황_기간별</title>
+	@@include('include/inc_html_head.html')
+</head>
+<body>	 
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			@@include('include/inc_header.html')
+			<!-- /header -->
+			
+			<!-- lnb & location -->
+			@@include('include/inc_left.html')
+			<!-- /lnb & location -->
+
+				<!-- search -->
+				<div class="search_area clearFix mt10 pb10">
+					<div class="form_control">
+						<div class="form_control_item mb00">
+							<select name="">
+								<option value="일별">일별</option>                            
+								<option value="전체">전체</option>
+								<option value="주별">주별</option>                            
+								<option value="월별">월별</option>                            
+							</select>
+						</div>
+						
+						<div class="form_control_item mb00">
+							<strong>기간</strong>
+							<span class="form_control_datepicker">
+								<input type="text" id="prevMonthDatepicker">
+							</span>
+							<span class="ml10 mr10">~</span>
+							<span class="form_control_datepicker">
+								<input type="text" id="nextMonthDatepicker">
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- /search -->
+
+				<div class="clearFix chart_wrap">
+					<p style="padding-top:150px;text-align:center;font-size:30px;">chart area</p>
+				</div>
+
+				<table class="tbl_list" summary="table list">
+					<caption>table list</caption>
+					<colgroup>
+						<col style="width:5%">
+						<col style="width:15%">
+						<col style="width:15%">
+						<col style="width:15%">
+						<col style="width:15%">
+						<col style="width:15%">
+						<col style="width:5%">
+						<col style="width:15%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="first">NO</th>
+							<th scope="col">아이디</th>
+							<th scope="col">회원명</th>
+							<th scope="col">이메일</th>
+							<th scope="col">휴대폰 번호</th>
+							<th scope="col">학교명 <i class="fas fa-sort"></i> </th>
+							<th scope="col">학년 <i class="fas fa-sort"></i> </th>
+							<th scope="col">마케팅 동의 여부 <i class="fas fa-sort"></i> </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td scope="row" class="first">1</td>
+							<td>test1234</td>
+							<td>김*재</td>
+							<td>test1234@naver.com</td>
+							<td>010-1234-4567</td>
+							<td>영덕초등학교</td>
+							<td>3</td>
+							<td>동의</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first">2</td>
+							<td>test1234</td>
+							<td>김*재</td>
+							<td>test1234@naver.com</td>
+							<td>010-1234-4567</td>
+							<td>영덕초등학교</td>
+							<td>3</td>
+							<td>동의</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first">3</td>
+							<td>test1234</td>
+							<td>김*재</td>
+							<td>test1234@naver.com</td>
+							<td>010-1234-4567</td>
+							<td>영덕초등학교</td>
+							<td>3</td>
+							<td>동의</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first">4</td>
+							<td>test1234</td>
+							<td>김*재</td>
+							<td>test1234@naver.com</td>
+							<td>010-1234-4567</td>
+							<td>영덕초등학교</td>
+							<td>3</td>
+							<td>동의</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first">5</td>
+							<td>test1234</td>
+							<td>김*재</td>
+							<td>test1234@naver.com</td>
+							<td>010-1234-4567</td>
+							<td>영덕초등학교</td>
+							<td>3</td>
+							<td>동의</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first">6</td>
+							<td>test1234</td>
+							<td>김*재</td>
+							<td>test1234@naver.com</td>
+							<td>010-1234-4567</td>
+							<td>영덕초등학교</td>
+							<td>3</td>
+							<td>동의</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first">7</td>
+							<td>test1234</td>
+							<td>김*재</td>
+							<td>test1234@naver.com</td>
+							<td>010-1234-4567</td>
+							<td>영덕초등학교</td>
+							<td>3</td>
+							<td>동의</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first">8</td>
+							<td>test1234</td>
+							<td>김*재</td>
+							<td>test1234@naver.com</td>
+							<td>010-1234-4567</td>
+							<td>영덕초등학교</td>
+							<td>3</td>
+							<td>동의</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first">9</td>
+							<td>test1234</td>
+							<td>김*재</td>
+							<td>test1234@naver.com</td>
+							<td>010-1234-4567</td>
+							<td>영덕초등학교</td>
+							<td>3</td>
+							<td>동의</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first">10</td>
+							<td>test1234</td>
+							<td>김*재</td>
+							<td>test1234@naver.com</td>
+							<td>010-1234-4567</td>
+							<td>영덕초등학교</td>
+							<td>3</td>
+							<td>동의</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- paging -->
+				<div class="paging mt20">
+					<a href="javascript:void(0);" class="pprev">
+						<img src="../images/arrow_paging_pprev.png" alt="forefront">
+					</a>
+					<a href="javascript:void(0);" class="prev">
+						<img src="../images/arrow_paging_prev.png" alt="prev">
+					</a>					
+					<a href="javascript:void(0);">1</a>
+					<a href="javascript:void(0);">2</a>
+					<a href="javascript:void(0);">3</a>
+					<a href="javascript:void(0);">4</a>
+					<a href="javascript:void(0);" class="on">5</a>											
+
+					<a href="javascript:void(0);" class="next">
+						<img src="../images/arrow_paging_next.png" alt="next">
+					</a>
+					<a href="javascript:void(0);" class="nnext">
+						<img src="../images/arrow_paging_nnext.png" alt="last">
+					</a>										
+				</div>
+				<!-- //paging -->
+			</div>
+		</div>
+
+	</div>	
+	<!-- / content -->
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>응원문구관리_등록</title>
+	@@include('include/inc_html_head.html')
+</head>
+<body>
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			@@include('include/inc_header.html')
+			<!-- /header -->
+
+			<!-- lnb & location -->
+			@@include('include/inc_left.html')
+			<!-- /lnb & location -->
+
+				<h3 class="tbl_tit">기본 설정</h3>
+
+				<table class="tbl_view mt10 mb10">
+					<caption></caption>
+					<colgroup>
+						<col style="width:20%">
+						<col style="width:80%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">구분</th>
+							<td>
+								<div class="radio_type">
+									<input type="radio" id="radio_btn1" name="radio_type1" checked>
+									<label for="radio_btn1">메인(홈)</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="radio_btn2" name="radio_type1">
+									<label for="radio_btn2">문제 풀기</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="radio_btn3" name="radio_type1">
+									<label for="radio_btn3">학습 결과 팝업</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="radio_btn4" name="radio_type1">
+									<label for="radio_btn4">책별 통계</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">조건(메인)</th>
+							<td>
+								<!-- 1. 메인(홈)일때 -->
+								<span>진행률(전체 챌린지 나의 진행률 / 추천 진행률 *100) = </span>
+								<input type="text" class="input_default w10p" placeholder="최소값"><span> % 이상</span>
+								<span>~</span>
+								<input type="text" class="input_default w10p" placeholder="최대값"><span> % 이상</span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">조건(문제 풀기)</th>
+							<td>
+								<!-- 2. 문제 풀기 일때 -->
+								<div class="radio_type">
+									<input type="radio" id="radio_correct" name="radio_type2_1" checked>
+									<label for="radio_correct">정답 선택 시</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="radio_incorrect" name="radio_type2_1">
+									<label for="radio_incorrect">오답 선택 시</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">조건(학습 결과 팝업)</th>
+							<td>
+								<!-- 3. 학습 결과 팝업 -->
+								<div class="radio_type">
+									<input type="radio" id="starGet1" name="radio_type2_2" checked>
+									<label for="starGet1">별 1개 획득</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="starGet2" name="radio_type2_2">
+									<label for="starGet2">별 2개 획득</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="starGet3" name="radio_type2_2">
+									<label for="starGet3">별 3개 획득</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">책별 통계</th>
+							<td>
+								<!-- 4. 책별 통계일때 -->
+								<span>별 습득률(내가 습득한 별 개수 / 전체 별 개수*100) = </span>
+								<input type="text" class="input_default w10p" placeholder="최소값"><span> % 이상</span>
+								<span>~</span>
+								<input type="text" class="input_default w10p" placeholder="최대값"><span> % 이상</span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">적용 여부</th>
+							<td>
+								<div class="radio_type">
+									<input type="radio" id="radio_use" name="radio_type3">
+									<label for="radio_use">적용</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="radio_useN" name="radio_type3" checked>
+									<label for="radio_useN">미적용</label>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="clearFix btn_left_right border_b">
+					<h3 class="tbl_tit">응원 문구 등록</h3>
+					<a href="#" class="btn btn_ty7 blr_right mt15 btn_txt_add">문구추가</a>
+				</div>
+
+				<div class="lst_add_remove">
+					<ol>
+						<li><input type="text" name="txt" placeholder="응원 문구를 입력하세요."> <a href="#" class="btn_remove btn btn_ty7">삭제</a></li>
+					</ol>
+				</div>
+
+				<!-- button -->	                    
+				<div class="btn_right clearFix mt50 mb10">
+					<a class="btn btn_ty7" href="#">등록</a>
+					<a class="btn btn_ty7" href="#">취소</a>
+				</div>
+				<!-- //button -->	                    
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		// 문구 추가 삭제
+		$(function(){
+			$('.btn_txt_add').on('click', function(e){ 
+				e.preventDefault();
+				$('.lst_add_remove ol').append (
+					'<li><input type="text" name="txt" placeholder="응원 문구를 입력하세요."> <a href="#" class="btn_remove btn btn_ty7">삭제</a></li>'
+				);
+				btnRemove();
+			});
+			btnRemove();
+		});
+
+		function btnRemove() {
+			$('.btn_remove').on('click', function(e){ 
+				e.preventDefault();
+				$(this).parent().remove();
+			});
+		}
+	</script>
+</body>
+</html>

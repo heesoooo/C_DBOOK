@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>통계요약</title>
+	@@include('include/inc_html_head.html')
+</head>
+<body>	 
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			@@include('include/inc_header.html')
+			<!-- /header -->
+			
+			<!-- lnb & location -->
+			@@include('include/inc_left.html')
+			<!-- /lnb & location -->
+
+				<!-- 가입,탈퇴,접속자 수 요약 -->
+				<div class="d_flex space_between">
+					<div class="statistics_summary">
+						<div class="box">
+							<h3>가입자 요약</h3>
+							<ul>
+								<li>총 가입자 수 <strong><span>2,103</span>명</strong></li>
+								<li>이번달 가입자 수 <strong><span>843</span>명</strong></li>
+								<li>금주 가입자 수 <strong><span>300</span>명</strong></li>
+								<li>금일 가입자 수 <strong><span>10</span>명</strong></li>
+							</ul>
+						</div>
+					</div>
+					<div class="statistics_summary">
+						<div class="box">
+							<h3>탈퇴자 요약</h3>
+							<ul>
+								<li>총 탈퇴자 수 <strong><span>341</span>명</strong></li>
+								<li>이번달 탈퇴자 수 <strong><span>34</span>명</strong></li>
+								<li>금주 탈퇴자 수 <strong><span>10</span>명</strong></li>
+								<li>금일 탈퇴자 수 <strong><span>3</span>명</strong></li>
+							</ul>
+						</div>
+					</div>
+					<div class="statistics_summary">
+						<div class="box">
+							<h3>접속자 요약</h3>
+							<ul>
+								<li>이번달 접속자 수 <strong><span>1,811</span>명</strong></li>
+								<li>금주 접속자 수 <strong><span>1,211</span>명</strong></li>
+								<li>금일 접속자 수 <strong><span>693</span>명</strong></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //가입,탈퇴,접속자 수 요약 -->
+
+				<!-- 서비스 이용 log -->
+				<div class="log_record">
+					<h3>서비스 이용 log</h3>
+					<div class="log_tbl">
+						<table class="scrolltable">
+							<colgroup>
+								<col style="width:170px">
+								<col style="width:150px">
+								<col style="width:120px">
+								<col style="width:120px">
+								<col style="width:120px">
+								<col>
+							</colgroup>
+
+							<thead>
+								<tr>
+									<th>Time</th>
+									<th>IP</th>
+									<th>ID</th>
+									<th>Screen</th>
+									<th>Action</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+						</table>
+
+						<div class="log_tbl_body">
+							<table class="scrolltable">
+								<colgroup>
+									<col style="width:170px">
+									<col style="width:150px">
+									<col style="width:120px">
+									<col style="width:120px">
+									<col style="width:120px">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<td>2022/04/04 14:33:12</td>
+										<td>192.168.11.54</td>
+										<td>abc****</td>
+										<td>챌린지</td>
+										<td>Click</td>
+										<td>배너</td>
+									</tr>
+									<tr>
+										<td>2022/04/04 14:33:12</td>
+										<td>192.168.11.54</td>
+										<td>abc****</td>
+										<td>챌린지</td>
+										<td>Click</td>
+										<td>배너</td>
+									</tr>
+									<tr>
+										<td>2022/04/04 14:33:12</td>
+										<td>192.168.11.54</td>
+										<td>abc****</td>
+										<td>챌린지</td>
+										<td>Click</td>
+										<td>배너</td>
+									</tr>
+									<tr>
+										<td>2022/04/04 14:33:12</td>
+										<td>192.168.11.54</td>
+										<td>abc****</td>
+										<td>챌린지</td>
+										<td>Click</td>
+										<td>배너</td>
+									</tr>
+									<tr>
+										<td>2022/04/04 14:33:12</td>
+										<td>192.168.11.54</td>
+										<td>abc****</td>
+										<td>챌린지</td>
+										<td>Click</td>
+										<td>배너</td>
+									</tr>
+									<tr>
+										<td>2022/04/04 14:33:12</td>
+										<td>192.168.11.54</td>
+										<td>abc****</td>
+										<td>챌린지</td>
+										<td>Click</td>
+										<td>배너</td>
+									</tr>
+									<tr>
+										<td>2022/04/04 14:33:12</td>
+										<td>192.168.11.54</td>
+										<td>abc****</td>
+										<td>챌린지</td>
+										<td>Click</td>
+										<td>배너</td>
+									</tr>
+									<tr>
+										<td>2022/04/04 14:33:12</td>
+										<td>192.168.11.54</td>
+										<td>abc****</td>
+										<td>챌린지</td>
+										<td>Click</td>
+										<td>배너</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //서비스 이용 log -->
+
+			</div>
+			<!-- //content -->
+
+		</div>
+	</div>	
+</body>
+</html>

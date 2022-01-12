@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>가입자현황_전체</title>
+	@@include('include/inc_html_head.html')
+</head>
+<body>	 
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			@@include('include/inc_header.html')
+			<!-- /header -->
+			
+			<!-- lnb & location -->
+			@@include('include/inc_left.html')
+			<!-- /lnb & location -->
+
+				<!-- search -->
+				<div class="search_area clearFix mt10 pb10">
+					<div class="form_control">
+						<div class="form_control_item mb00">
+							<select name="">
+								<option value="전체">전체</option>
+								<option value="일별">일별</option>                            
+								<option value="주별">주별</option>                            
+								<option value="월별">월별</option>                            
+							</select>
+						</div>
+						
+						<div class="form_control_item mb00">
+							<strong>기간</strong>
+							<span class="form_control_datepicker">
+								<input type="text" id="prevMonthDatepicker">
+							</span>
+							<span class="ml10 mr10">~</span>
+							<span class="form_control_datepicker">
+								<input type="text" id="nextMonthDatepicker">
+							</span>
+
+							<a class="btn btn_ty7 ml10" href="#">검색</a>
+						</div>
+					</div>
+				</div>
+				<!-- /search -->
+
+				<div class="clearFix chart_wrap">
+					<p style="padding-top:150px;text-align:center;font-size:30px;">chart area</p>
+				</div>
+				
+				<div class="no_data" style="min-height: 300px">
+					<p>
+						기준을 선택해주세요.
+					</p>
+				</div>
+			       
+			</div>
+		</div>
+
+	</div>	
+	<!-- / content -->
+
+
+	<script>
+		$(function(){
+			// 시작일 option disabled
+			$("#prevMonthDatepicker").datepicker('option','disabled',true).parent().css("background","#bbb");
+		});
+	</script>
+</body>
+</html>

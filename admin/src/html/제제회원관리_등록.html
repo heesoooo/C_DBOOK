@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>팝업관리_상세</title>
+	@@include('include/inc_html_head.html')
+</head>
+<body>	 
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			@@include('include/inc_header.html')
+			<!-- /header -->
+			
+			<!-- lnb & location -->
+			@@include('include/inc_left.html')
+			<!-- /lnb & location -->
+
+				<table class="tbl_view mt10 mb10">
+					<caption></caption>
+					<colgroup>
+						<col style="width:20%">
+						<col style="width:80%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">아이디 <sup class="necessary">*</sup></th>
+							<td>
+								<input type="text" placeholder="아이디를 입력하세요." style="width: 70%">
+								<p class="strength">아이디를 입력해주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">회원명 <sup class="necessary">*</sup></th>
+							<td>
+								<input type="text" placeholder="회원명을 입력하세요." style="width: 70%">
+								<p class="strength">회원명을 입력해주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">이메일 <sup class="necessary">*</sup></th>
+							<td>
+								<input type="text" placeholder="이메일을 입력하세요." style="width: 70%">
+								<p class="strength">이메일을 입력해주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">휴대폰 번호 <sup class="necessary">*</sup></th>
+							<td>
+								<input type="text" placeholder="휴대폰 번호를 입력하세요." style="width: 70%">
+								<p class="strength">휴대폰 번호를 입력해주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">학교명 <sup class="necessary">*</sup></th>
+							<td>
+								<select name="">
+									<option value="학교급">학교급</option>
+									<option value="초등학교">초등학교</option>
+								</select>
+								<input type="text" placeholder="학교명을 입력하세요.(예: 천재중학교)" style="width: 60%">
+								<p class="strength">학교명를 입력해주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">학년</th>
+							<td>
+								<select name="">
+									<option value="학년">학년</option>
+									<option value="1학년">1학년</option>
+									<option value="2학년">2학년</option>
+									<option value="3학년">3학년</option>
+									<option value="4학년">4학년</option>
+									<option value="5학년">5학년</option>
+									<option value="6학년">6학년</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">제제사유</th>
+							<td>
+								<div class="radio_type">
+									<input type="radio" id="type1_1" name="type1" checked>
+									<label for="type1_1">댓글 신고 누적</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="type1_2" name="type1">
+									<label for="type1_2">기타 부적절한 이용</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">상태</th>
+							<td>
+								<div class="radio_type">
+									<input type="radio" id="type2_1" name="type2" checked>
+									<label for="type2_1">일반</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="type2_2" name="type2">
+									<label for="type2_2">중지</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="type2_3" name="type2">
+									<label for="type2_3">탈퇴</label>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+	
+				<!-- button -->
+				<div class="btn_right clearFix mt10 mb10">
+					<a class="btn btn_ty7" href="#">등록</a>
+					<a class="btn btn_ty7" href="#">취소</a>
+				</div>
+				<!-- //button -->	                    
+			</div>
+		</div>
+	</div>
+</body>
+</html>

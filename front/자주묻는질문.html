@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>자주묻는질문</title>
+	
+	<!-- css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- 자주 묻는 질문 -->
+
+	<div class="board_wrap">
+		<!-- tab -->
+		<div class="board_tab">
+			<ul>
+				<li class="active">
+					<a href="#">전체</a>
+				</li>
+				<li>
+					<a href="#">학습 문의</a>
+				</li>
+				<li>
+					<a href="#">모바일 문의</a>
+				</li>
+				<li>
+					<a href="#">결제 문의</a>
+				</li>
+				<li>
+					<a href="#">서비스 문의</a>
+				</li>
+				<li>
+					<a href="#">포인트 문의</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /tab -->
+
+		<!-- tab_content -->
+		<div class="tab_content">
+			<ul class="board_lst">
+				<li>
+					<div class="tit_row">
+						<span class="classify">[회원가입]</span>
+						<strong class="subject">
+							<em class="label_q">Q</em>
+							<span class="tit">회원가입은 어떻게 하나요?</span>
+						</strong>
+						<span class="arr"></span>
+					</div>
+					<div class="answer">
+						[천재교과서] 이용권 종료 안내<br>
+						종료일시 : 2021.09.02 - 2021.10.07<br>
+						천재교과서는 좀 더 완성도 높고 좋은 콘텐츠를 담은 
+						교과서를 개발하기 위해 설립한 기업입니다.
+						2007 개정 교육과정을 시작으로 2015 개정 교육과정에
+						이르기까지 수준 높고 차별화된 국정·검정·인정 교과용
+						도서를 안정적으로 개발 및 발행하면서 명실상부 교과서
+						출판 전문 기업으로 도약하고 있습니다.
+					</div>
+				</li>
+				<li>
+					<div class="tit_row">
+						<span class="classify">[학습문의]</span>
+						<strong class="subject">
+							<em class="label_q">Q</em>
+							<span class="tit">학습계획은 어디서 세우나요?</span>
+						</strong>
+						<span class="arr"></span>
+					</div>	
+					<div class="answer">
+						[천재교과서] 이용권 종료 안내<br>
+						종료일시 : 2021.09.02 - 2021.10.07<br>
+						천재교과서는 좀 더 완성도 높고 좋은 콘텐츠를 담은 
+						교과서를 개발하기 위해 설립한 기업입니다.
+						2007 개정 교육과정을 시작으로 2015 개정 교육과정에
+						이르기까지 수준 높고 차별화된 국정·검정·인정 교과용
+						도서를 안정적으로 개발 및 발행하면서 명실상부 교과서
+						출판 전문 기업으로 도약하고 있습니다.
+					</div>
+				</li>
+				<li>
+					<div class="tit_row">
+						<span class="classify">[결제문의]</span>
+						<strong class="subject">
+							<em class="label_q">Q</em>
+							<span class="tit">결제는 어디서 하나요?</span>
+						</strong>
+						<span class="arr"></span>
+					</div>	
+					<div class="answer">
+						[천재교과서] 이용권 종료 안내<br>
+						종료일시 : 2021.09.02 - 2021.10.07<br>
+						천재교과서는 좀 더 완성도 높고 좋은 콘텐츠를 담은 
+						교과서를 개발하기 위해 설립한 기업입니다.
+						2007 개정 교육과정을 시작으로 2015 개정 교육과정에
+						이르기까지 수준 높고 차별화된 국정·검정·인정 교과용
+						도서를 안정적으로 개발 및 발행하면서 명실상부 교과서
+						출판 전문 기업으로 도약하고 있습니다.
+					</div>
+				</li>
+				<li>
+					<div class="tit_row">
+						<span class="classify">[서비스문의]</span>
+						<strong class="subject">
+							<em class="label_q">Q</em>
+							<span class="tit">강의를 듣기 위해 결제 후에 진행을 하려고
+								하니 안됩니다.</span>
+						</strong>
+						<span class="arr"></span>
+					</div>	
+					<div class="answer">
+						[천재교과서] 이용권 종료 안내<br>
+						종료일시 : 2021.09.02 - 2021.10.07<br>
+						천재교과서는 좀 더 완성도 높고 좋은 콘텐츠를 담은 
+						교과서를 개발하기 위해 설립한 기업입니다.
+						2007 개정 교육과정을 시작으로 2015 개정 교육과정에
+						이르기까지 수준 높고 차별화된 국정·검정·인정 교과용
+						도서를 안정적으로 개발 및 발행하면서 명실상부 교과서
+						출판 전문 기업으로 도약하고 있습니다.
+					</div>
+				</li>				
+			</ul>
+		</div>
+		<!-- /tab_content -->
+	</div>
+
+
+	<!-- script -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script>		
+		$(function(){
+			// tab on/off
+			$(".board_tab a").on("click", function(e) {
+				e.preventDefault();
+				$(this).parent().addClass("active").siblings().removeClass("active");
+			});
+
+			// quistion
+			$(".tit_row").click(function(e) {
+				e.preventDefault()
+				$(".tit_row").next(".answer").slideUp(200);
+				$(".tit_row").find('.subject').removeClass("on");
+				
+				if($(this).next(".answer").css("display")=="none"){
+					$(this).next(".answer").slideDown(200);
+					$(this).find('.subject').addClass("on");
+				}
+			});
+		});	
+	</script>
+	
+</body>
+
+</html>

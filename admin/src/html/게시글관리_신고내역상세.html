@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>게시글관리_신고내역상세</title>
+	@@include('include/inc_html_head.html')
+</head>
+<body>	 
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			@@include('include/inc_header.html')
+			<!-- /header -->
+			
+			<!-- lnb & location -->
+			@@include('include/inc_left.html')
+			<!-- /lnb & location -->
+
+				<table class="tbl_view mt10 mb10">
+					<caption></caption>
+					<colgroup>
+						<col style="width:20%">
+						<col style="width:80%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">구분</th>
+							<td>원글</td>
+						</tr>
+						<tr>
+							<th scope="row">아이디</th>
+							<td>zero0324</td>
+						</tr>
+						<tr>
+							<th scope="row">회원명</th>
+							<td>김유미</td>
+						</tr>
+						<tr>
+							<th scope="row">이메일</th>
+							<td>test3302@naver.com</td>
+						</tr>
+						<tr>
+							<th scope="row">휴대폰번호</th>
+							<td>010-1234-5678</td>
+						</tr>
+						<tr>
+							<th scope="row">신고 내용</th>
+							<td>
+								<textarea name="" id="" cols="30" rows="10" class="w100p">신고합니다.</textarea>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">신고 개수</th>
+							<td>36개</td>
+						</tr>
+						<tr>
+							<th scope="row">신고 사유</th>
+							<td>
+								<ul>
+									<li class="mb10">주제에 맞지 않는 글입니다. <span class="ml20">12개</span></li>
+									<li class="mb10">주제에 맞지 않는 글입니다. <span class="ml20">12개</span></li>
+									<li class="mb10">주제에 맞지 않는 글입니다. <span class="ml20">12개</span></li>
+									<li class="mb10">주제에 맞지 않는 글입니다. <span class="ml20">12개</span></li>
+									<li class="mb10">주제에 맞지 않는 글입니다. <span class="ml20">12개</span></li>
+									<li class="mb10">주제에 맞지 않는 글입니다. <span class="ml20">12개</span></li>
+									<li class="mb10">주제에 맞지 않는 글입니다. <span class="ml20">12개</span></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">최초 신고일</th>
+							<td>2022-01-23</td>
+						</tr>
+						<tr>
+							<th scope="row">제제 안내 발송 여부</th>
+							<td>
+								<input type="radio" id="noShipped" name="radio_type" checked="">
+								<label for="noShipped" class="mr10">미발송</label>
+
+								<input type="radio" id="send" name="radio_type" checked="">
+								<label for="send" class="mr10">
+									발송 ( 발송일 : <input type="text"> )
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">상태</th>
+							<td>
+								<div class="radio_type">
+									<input type="radio" id="reveal" name="disclosure">
+									<label for="reveal">공개</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="private" name="disclosure" checked="">
+									<label for="private">비공개</label>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+	
+				<!-- button -->
+				<div class="btn_right clearFix mt10 mb10">
+					<a class="btn btn_ty7" href="#">등록</a>
+					<a class="btn btn_ty7" href="#">취소</a>
+				</div>
+				<!-- //button -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

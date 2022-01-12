@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>카테고리관리</title>
+	@@include('include/inc_html_head.html')
+</head>
+<body>	 
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			@@include('include/inc_header.html')
+			<!-- /header -->
+			
+			<!-- lnb & location -->
+			@@include('include/inc_left.html')
+			<!-- /lnb & location -->
+
+
+				<!-- Excel upload -->
+				<div class="upload_wrap">
+					<div class="upload_box">
+						<h3>대단원</h3>
+						<div class="excel_view">
+							엑셀내용이보여집니다.
+						</div>
+					</div>
+
+					<div class="upload_box">
+						<h3>주제</h3>
+						<div class="excel_view">
+							엑셀내용이보여집니다.
+						</div>
+					</div>
+
+					<div class="upload_box">
+						<h3>꾸러미</h3>
+						<div class="excel_view">
+							<p class="pt10 pb10 pl10">예시입니다</p>
+							<table class="tbl_list" summary="table list" style="width: auto;border:0">
+								<caption>table list</caption>
+								<colgroup>
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" class="first"><input type="checkbox" class="all_check"></th>
+										<th scope="col">NO <i class="fa fa-sort-down"></i></th>
+										<th scope="col">책명</th>
+										<th scope="col">학습방법</th>								
+										<th scope="col">별포인트</th>								                                
+										<th scope="col">등록일 <i class="fas fa-sort"></i></th>								                                
+										<th scope="col">수정일 <i class="fas fa-sort"></i></th>								                                
+										<th scope="col">공개 여부</th>								                                
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td scope="row" class="first"><input type="checkbox"></td>
+										<td>1</td>
+										<td>체크체크 사회 1-1 본교재(진도 교재)</td>								
+										<td>1달 안에 풀기</td>								
+										<td>40</td>
+										<td>2022-01-12</td>
+										<td>2022-01-13</td>
+										<td>공개</td>
+									</tr>
+									<tr>
+										<td scope="row" class="first"><input type="checkbox"></td>
+										<td>2</td>
+										<td>체크체크 사회 1-1 본교재(진도 교재)</td>								
+										<td>1달 안에 풀기</td>								
+										<td>40</td>
+										<td>2022-01-12</td>
+										<td>2022-01-13</td>
+										<td>공개</td>
+									</tr>
+									<tr>
+										<td scope="row" class="first"><input type="checkbox"></td>
+										<td>3</td>
+										<td>체크체크 사회 1-1 본교재(진도 교재)</td>								
+										<td>1달 안에 풀기</td>								
+										<td>40</td>
+										<td>2022-01-12</td>
+										<td>2022-01-13</td>
+										<td>공개</td>
+									</tr>
+									<tr>
+										<td scope="row" class="first"><input type="checkbox"></td>
+										<td>4</td>
+										<td>체크체크 사회 1-1 본교재(진도 교재)</td>								
+										<td>1달 안에 풀기</td>								
+										<td>40</td>
+										<td>2022-01-12</td>
+										<td>2022-01-13</td>
+										<td>공개</td>
+									</tr>
+									<tr>
+										<td scope="row" class="first"><input type="checkbox"></td>
+										<td>5</td>
+										<td>체크체크 사회 1-1 본교재(진도 교재)</td>								
+										<td>1달 안에 풀기</td>								
+										<td>40</td>
+										<td>2022-01-12</td>
+										<td>2022-01-13</td>
+										<td>공개</td>
+									</tr>
+									<tr>
+										<td scope="row" class="first"><input type="checkbox"></td>
+										<td>6</td>
+										<td>체크체크 사회 1-1 본교재(진도 교재)</td>								
+										<td>1달 안에 풀기</td>								
+										<td>40</td>
+										<td>2022-01-12</td>
+										<td>2022-01-13</td>
+										<td>공개</td>
+									</tr>
+									<tr>
+										<td scope="row" class="first"><input type="checkbox"></td>
+										<td>7</td>
+										<td>체크체크 수학 베이직 2-1</td>								
+										<td>1달 안에 풀기</td>								
+										<td>40</td>
+										<td>2022-01-12</td>
+										<td>2022-01-13</td>
+										<td>공개</td>
+									</tr>
+									<tr>
+										<td scope="row" class="first"><input type="checkbox"></td>
+										<td>8</td>
+										<td>체크체크 수학 베이직 2-1</td>								
+										<td>1달 안에 풀기</td>								
+										<td>40</td>
+										<td>2022-01-12</td>
+										<td>2022-01-13</td>
+										<td>공개</td>
+									</tr>
+									<tr>
+										<td scope="row" class="first"><input type="checkbox"></td>
+										<td>9</td>
+										<td>체크체크 수학 베이직 2-1</td>								
+										<td>1달 안에 풀기</td>								
+										<td>40</td>
+										<td>2022-01-12</td>
+										<td>2022-01-13</td>
+										<td>공개</td>
+									</tr>
+									<tr>
+										<td scope="row" class="first"><input type="checkbox"></td>
+										<td>10</td>
+										<td>체크체크 수학 베이직 2-1</td>								
+										<td>1달 안에 풀기</td>								
+										<td>40</td>
+										<td>2022-01-12</td>
+										<td>2022-01-13</td>
+										<td>공개</td>
+									</tr>						
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- //Excel upload -->					
+				
+				<!-- button -->
+				<div class="btn_right clearFix mt10 mb10">						                        
+					<a class="btn btn_ty7" href="#">엑셀 다운로드</a>
+					<a class="btn btn_ty7" href="#" data-target="popupRegist7">엑셀 업로드</a>
+				</div>
+				<!-- //button -->				
+			</div>
+		</div>
+
+	</div>	
+	<!-- / content -->
+
+	<!-- 엑셀 파일 업로드 팝업 -->
+	<div class="popup popup_default_type" id="popupRegist7">
+		<div class="inner">
+			<h3>엑셀 업로드</h3>
+
+			<div class="mt20">
+				<strong class="mr15">엑셀 업로드</strong>
+				<input type="file" class="w80p">
+				<p class="strength mb05">등록가능한 확장자는 xls, xlsx 입니다.</p>
+			</div>
+			<div class="clearFix mt10 right">
+				<a class="btn btn_ty7" href="#">업로드</a>
+				<a class="btn btn_ty7" href="#" onclick="javascript:adminDbook.HideModalPopup('popupRegist7');">닫기</a>
+			</div>
+		</div>
+	</div>
+	<!-- /엑셀 파일 업로드 팝업 -->
+
+	<script>
+		adminDbook.ShowModalPopup("popupRegist7");
+	</script>
+</body>
+</html>

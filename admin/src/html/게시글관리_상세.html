@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>게시글관리_상세</title>
+	@@include('include/inc_html_head.html')
+</head>
+<body>	 
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			@@include('include/inc_header.html')
+			<!-- /header -->
+			
+			<!-- lnb & location -->
+			@@include('include/inc_left.html')
+			<!-- /lnb & location -->
+
+				<table class="tbl_view mt10 mb10">
+					<caption></caption>
+					<colgroup>
+						<col style="width:20%">
+						<col style="width:80%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">책명</th>
+							<td>체크체크 수학 1-1</td>
+						</tr>
+						<tr>
+							<th scope="row">좋아요 개수</th>
+							<td>111</td>
+						</tr>
+						<tr>
+							<th scope="row">댓글 개수</th>
+							<td>3,040</td>
+						</tr>
+						<tr>
+							<th scope="row">신고 개수</th>
+							<td>64</td>
+						</tr>
+						<tr>
+							<th scope="row">(신고)미처리 개수</th>
+							<td><strong class="necessary">32</strong></td>
+						</tr>
+						<tr>
+							<th scope="row">블라인드 개수</th>
+							<td>32</td>
+						</tr>
+
+					</tbody>
+				</table>
+	
+				<!-- button -->
+				<div class="btn_right clearFix mt10 mb10">
+					<a class="btn btn_ty7" href="#">신고내역</a>
+					<a class="btn btn_ty7" href="#">이전으로</a>
+				</div>
+				<!-- //button -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

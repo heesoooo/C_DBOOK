@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>팝업관리_상세</title>
+	@@include('include/inc_html_head.html')
+</head>
+<body>	 
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			@@include('include/inc_header.html')
+			<!-- /header -->
+			
+			<!-- lnb & location -->
+			@@include('include/inc_left.html')
+			<!-- /lnb & location -->
+
+				<table class="tbl_view mt10 mb10">
+					<caption></caption>
+					<colgroup>
+						<col style="width:20%">
+						<col style="width:80%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">제목</th>
+							<td>
+								<input type="text" placeholder="제목을 입력하세요." style="width: 70%">
+								<p class="strength">제목을 입력하세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">공개기간</th>
+							<td>
+								<div class="form_control">
+									<div class="form_control_item mb00">
+										<span class="form_control_datepicker">
+											<input type="text" id="prevMonthDatepicker" placeholder="시작일">
+										</span>
+										<span class="ml10 mr10">~</span>
+										<span class="form_control_datepicker">
+											<input type="text" id="nextMonthDatepicker" placeholder="종료일">
+										</span>
+									</div>
+								</div>
+								<p class="strength">공개 기간을 설정하세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">URL 입력</th>
+							<td><input type="text" placeholder="URL을 입력하세요." style="width: 70%"></td>
+						</tr>						
+						<tr>
+							<th scope="row">팝업 이미지 등록</th>
+							<td>
+								<!-- 이미지 Upload -->
+								<div class="review_img_upload">
+									<!-- preview img -->
+									<div class="image_wrap" style="width:120px; height:150px;"> <!-- 이미지 width/height값 넣어주세요. -->
+										<img id="previewImage01" src="http://placehold.it/300x150"/>
+										<span class="f_name"></span>
+									</div>
+									<!-- input file select -->
+									<label for="inputImgs">파일 선택</label>
+									<input type="file" id="inputImgs">
+									
+									<p class="noti">※ jpg, png, gif 이미지 파일만 등록 가능합니다. (등록 사이즈 : 120 * 150px)</p>
+								</div>
+								<!-- 이미지 Upload -->
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">공개 여부</th>
+							<td>
+								<div class="radio_type">
+									<input type="radio" id="reveal" name="disclosure">
+									<label for="reveal">공개</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="private" name="disclosure" checked>
+									<label for="private">비공개</label>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+	
+				<!-- button -->
+				<div class="btn_right clearFix mt10 mb10">
+					<a class="btn btn_ty7" href="#">등록</a>
+					<a class="btn btn_ty7" href="#">취소</a>
+				</div>
+				<!-- //button -->	                    
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(function(){
+			$("#inputImgs").change(function(event) {
+				$(".image_wrap .f_name").empty();
+
+				var previewImageID = $(this).parent().find("img").attr("id");
+				var fileSize = this.files[0].size;
+				var fileName = this.files[0].name;
+
+				if(fileName.length > 20){
+					fileName = fileName.substring(0,15)+"...";
+				}
+				$(this).parent().find(".f_name").append(fileName + '<span class="f_size">'+ returnFileSize(fileSize) +'</span>' + '<a href="#" class="f_delete">'+ '<img src="../images/btn_pop_close.png" alt="삭제">' +'</a>' );
+				console.log(returnFileSize(fileSize));
+
+				previewFile(this, previewImageID);
+			});		
+		});
+
+		// preview image
+		function previewFile(input, image) {
+			var preview = document.getElementById(image);
+			var file = input.files[0];
+			var reader = new FileReader();
+			reader.addEventListener("load", function() {
+				preview.src = reader.result;
+			}, false);
+			if (file) {
+				reader.readAsDataURL(file);
+			}
+		}
+
+		// f.size check
+		function returnFileSize(number) {
+			if(number < 1024) {
+				return number + 'bytes';
+			} else if(number > 1024 && number < 1048576) {
+				return (number/1024).toFixed(1) + 'KB';
+			} else if(number > 1048576) {
+				return (number/1048576).toFixed(1) + 'MB';
+			}
+		}		
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!-- title area -->
+			<div class="header_wrap">
+				<h1><img src="../images/logo.png" alt="천재교육"></h1>
+				<div class="user_service right">
+					<span class="unprocess">미처리 신고<a href="#">32</a></span>
+					<a href="#" class="btn_default btn_sky_blue right">Logout</a>						
+					
+					<p class="user_info">
+						<span class="user_name">admin</span> 님의 관리자 등급은 <strong>최고관리자</strong>입니다.
+					</p>
+				</div>
+			</div>
+			<!-- /title area -->
+
+			<!-- menu area -->
+			<nav class="gnb clearFix">
+				<ul>
+					<li rel="nav01" class="active"><a href="#">콘텐츠 관리</a></li>
+					<li rel="nav02"><a href="#">챌린지 관리</a></li>
+					<li rel="nav03"><a href="#">운영 관리</a></li>
+					<li rel="nav04"><a href="#">회원 관리</a></li>
+					<li rel="nav05"><a href="#">관리자 관리</a></li>
+					<li rel="nav06"><a href="#">통계</a></li>
+					<li rel="nav07"><a href="#">데이터베이스 관리</a></li>
+				</ul>
+			</nav>
+			<!-- /menu area -->
+
+			<script>
+				$(function(){
+					$(".gnb li").on("click", function(e){
+						e.preventDefault();
+						$(this).addClass("active").siblings().removeClass("active");
+						
+						// 개발작업시 삭제해주세요. ↓
+						var id = $(this).attr('rel');
+						$('#' + id).show().siblings('ul').hide();
+						
+						$(".menu_tree").hide();
+						$("#content").css("width", 1080);
+					});
+				});
+			</script>

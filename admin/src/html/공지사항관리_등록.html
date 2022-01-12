@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>공지사항관리_등록</title>
+	@@include('include/inc_html_head.html')
+</head>
+<body>	 
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			@@include('include/inc_header.html')
+			<!-- /header -->
+			
+			<!-- lnb & location -->
+			@@include('include/inc_left.html')
+			<!-- /lnb & location -->
+
+				<table class="tbl_view mt10 mb10">
+					<caption></caption>
+					<colgroup>
+						<col style="width:20%">
+						<col style="width:80%">
+					</colgroup>
+					<tbody>
+                        <tr>
+							<th scope="row">구분</th>
+							<td>
+								<div class="radio_type">
+									<input type="radio" id="type1" name="radioType">
+									<label for="type1">기능개선</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="type2" name="radioType" checked="">
+									<label for="type2">안내</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">제목</th>
+							<td>
+								<input type="text" placeholder="제목을 입력하세요." style="width: 70%">
+								<p class="strength">제목을 입력하세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">공개기간</th>
+							<td>
+								<div class="form_control">
+									<div class="form_control_item mb00">
+										<span class="form_control_datepicker">
+											<input type="text" id="prevMonthDatepicker" placeholder="시작일">
+										</span>
+										<span class="ml10 mr10">~</span>
+										<span class="form_control_datepicker">
+											<input type="text" id="nextMonthDatepicker" placeholder="종료일">
+										</span>
+									</div>
+								</div>
+								<p class="strength">공개 기간을 설정하세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">내용</th>
+							<td>
+                                <textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력하세요" class="w100p"></textarea>
+                            </td>
+						</tr>						
+						<tr>
+							<th scope="row">공개 여부</th>
+							<td>
+								<div class="radio_type">
+									<input type="radio" id="reveal" name="disclosure">
+									<label for="reveal">공개</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="private" name="disclosure" checked>
+									<label for="private">비공개</label>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+	
+				<!-- button -->
+				<div class="btn_right clearFix mt10 mb10">
+					<a class="btn btn_ty7" href="#">등록</a>
+					<a class="btn btn_ty7" href="#">취소</a>
+				</div>
+				<!-- //button -->	                    
+			</div>
+		</div>
+	</div>
+</body>
+</html>

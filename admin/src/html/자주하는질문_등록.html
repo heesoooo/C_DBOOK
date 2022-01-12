@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>자주하는질문_등록</title>
+	@@include('include/inc_html_head.html')
+</head>
+<body>	 
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			@@include('include/inc_header.html')
+			<!-- /header -->
+			
+			<!-- lnb & location -->
+			@@include('include/inc_left.html')
+			<!-- /lnb & location -->
+
+				<table class="tbl_view mt10 mb10">
+					<caption></caption>
+					<colgroup>
+						<col style="width:20%">
+						<col style="width:80%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">구분</th>
+							<td>
+								<div class="radio_type mr15">
+									<input type="radio" id="type1" name="type" checked>
+									<label for="type1">학습 문의</label>
+								</div>
+								<div class="radio_type mr15">
+									<input type="radio" id="type2" name="type">
+									<label for="type2">별/상점 문의</label>
+								</div>
+								<div class="radio_type mr15">
+									<input type="radio" id="type3" name="type">
+									<label for="type3">결제/환불 문의</label>
+								</div>
+								<div class="radio_type mr15">
+									<input type="radio" id="type4" name="type">
+									<label for="type4">가입/탈퇴 문의</label>
+								</div>
+								<div class="radio_type mr15">
+									<input type="radio" id="type5" name="type">
+									<label for="type5">기타</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">질문 <sup class="necessary">*</sup></th>
+							<td>
+								<input type="text" placeholder="질문을 입력하세요" class="w50p">
+								<p class="strength">질문을 입력하세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">답변 <sup class="necessary">*</sup></th>
+							<td>
+								<textarea name="" id="" cols="30" rows="10" class="w100p" placeholder="답변을 입력하세요."></textarea>
+								<p class="strength">답변을 입력하세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">공개 여부</th>
+							<td>
+								<div class="radio_type">
+									<input type="radio" id="reveal" name="disclosure">
+									<label for="reveal">공개</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="private" name="disclosure" checked="">
+									<label for="private">비공개</label>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+	
+				<!-- button -->
+				<div class="btn_right clearFix mt10 mb10">
+					<a class="btn btn_ty7" href="#">등록</a>
+					<a class="btn btn_ty7" href="#">취소</a>
+				</div>
+				<!-- //button -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

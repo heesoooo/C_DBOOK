@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>공지사항</title>
+
+	<!-- css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<!-- 공지사항 -->
+	<div class="board_wrap">
+		<div class="total_num">
+			총 <strong>100</strong>건
+		</div>
+		<ul class="board_lst">
+			<li>
+				<div class="tit_row">
+					<span class="date">2021.09.02</span>
+					<strong class="subject">
+						천재교과서 프리패스 이용권 종료 안내
+					</strong>
+					<span class="arr"></span>
+				</div>
+				<div class="answer">
+					<p>[천재교과서] 이용권 종료 안내<br>
+					종료일시 : 2021.09.02 - 2021.10.07<br>
+					천재교과서는 좀 더 완성도 높고 좋은 콘텐츠를 담은
+					교과서를 개발하기 위해 설립한 기업입니다.
+					2007 개정 교육과정을 시작으로 2015 개정 교육과정에
+					이르기까지 수준 높고 차별화된 국정·검정·인정 교과용
+					도서를 안정적으로 개발 및 발행하면서 명실상부 교과서
+					출판 전문 기업으로 도약하고 있습니다.</p>
+				</div>
+			</li>
+			<li>
+				<div class="tit_row">
+					<span class="date">2021.09.02</span>
+					<strong class="subject">
+						7월 이벤트 당첨자 발표
+					</strong>
+					<span class="arr"></span>
+				</div>
+				<div class="answer">
+					<p>[천재교과서] 이용권 종료 안내<br>
+					종료일시 : 2021.09.02 - 2021.10.07<br>
+					천재교과서는 좀 더 완성도 높고 좋은 콘텐츠를 담은
+					교과서를 개발하기 위해 설립한 기업입니다.
+					2007 개정 교육과정을 시작으로 2015 개정 교육과정에
+					이르기까지 수준 높고 차별화된 국정·검정·인정 교과용
+					도서를 안정적으로 개발 및 발행하면서 명실상부 교과서
+					출판 전문 기업으로 도약하고 있습니다.</p>
+				</div>
+			</li>
+			<li>
+				<div class="tit_row">
+					<span class="date">2021.09.02</span>
+					<strong class="subject">
+						시스템 작업 안내(8/30)
+					</strong>
+					<span class="arr"></span>
+				</div>
+				<div class="answer">
+					<p>[천재교과서] 이용권 종료 안내<br>
+					종료일시 : 2021.09.02 - 2021.10.07<br>
+					천재교과서는 좀 더 완성도 높고 좋은 콘텐츠를 담은
+					교과서를 개발하기 위해 설립한 기업입니다.
+					2007 개정 교육과정을 시작으로 2015 개정 교육과정에
+					이르기까지 수준 높고 차별화된 국정·검정·인정 교과용
+					도서를 안정적으로 개발 및 발행하면서 명실상부 교과서
+					출판 전문 기업으로 도약하고 있습니다.</p>
+				</div>
+			</li>
+			<li>
+				<div class="tit_row">
+					<span class="date">2021.09.02</span>
+					<strong class="subject">
+						6월 이전 고객 정보 안내 
+					</strong>
+					<span class="arr"></span>
+				</div>
+				<div class="answer">
+					<p>[천재교과서] 이용권 종료 안내<br>
+					종료일시 : 2021.09.02 - 2021.10.07<br>
+					천재교과서는 좀 더 완성도 높고 좋은 콘텐츠를 담은
+					교과서를 개발하기 위해 설립한 기업입니다.
+					2007 개정 교육과정을 시작으로 2015 개정 교육과정에
+					이르기까지 수준 높고 차별화된 국정·검정·인정 교과용
+					도서를 안정적으로 개발 및 발행하면서 명실상부 교과서
+					출판 전문 기업으로 도약하고 있습니다.</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- //공지사항 -->
+
+	<!-- script -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function () {
+			$(".tit_row").on("click", function(e){
+				e.preventDefault();
+				$(".tit_row").next(".answer").slideUp(200);
+				$(".tit_row").find('.subject').removeClass("on");
+				
+				if ($(this).next(".answer").css("display") == "none") {
+					$(this).next(".answer").slideDown(200);
+					$(this).find('.subject').addClass("on");
+				}
+			});
+		});
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>챌린지관리</title>
+	@@include('include/inc_html_head.html')
+</head>
+<body>
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			@@include('include/inc_header.html')
+			<!-- /header -->
+			
+			<!-- lnb & location -->
+			@@include('include/inc_left.html')
+			<!-- /lnb & location -->
+
+				<!-- search -->
+				<div class="search_area clearFix mt10 pb10">
+					<select name="">
+						<option value="전체">전체</option>
+						<option value="책시리즈">책시리즈</option>                            
+						<option value="책명">책명</option>                            
+						<option value="별포인트">별포인트</option>                            
+					</select>
+					
+					<div class="search_box">
+						<input type="text" placeholder="검색어를 입력하세요.">
+						<button type="submit" class="btn-search">검색하기</button>
+					</div>
+
+					<a class="btn btn_ty7" href="#" data-key="detail">상세 ▼</a>
+				</div>
+				<!-- /search -->
+
+				<!-- 상세 버튼 클릭시 나오는 영역 -->
+				<div class="search_detail_area">
+					<div class="form_control">
+						<div class="form_control_item">
+							<strong>학교급</strong>
+							<select name="" id="" style="width: 100px">
+								<option value="학교급">학교급</option>
+							</select>
+						</div>
+						<div class="form_control_item">
+							<strong>과목</strong>
+							<select name="" id="" style="width: 100px">
+								<option value="과목">과목</option>
+							</select>
+						</div>
+						<div class="form_control_item">
+							<strong>학년</strong>
+							<select name="" id="" style="width: 100px">
+								<option value="학년">학년</option>
+							</select>
+						</div>
+						<div class="form_control_item">
+							<strong>학습 방법</strong>
+							<div class="checkbox_type">
+								<input type="checkbox" id="check_es1">
+								<label for="check_es1">1달 안에 풀기</label>
+							</div>
+							<div class="checkbox_type">
+								<input type="checkbox" id="check_es2">
+								<label for="check_es2">2달 안에 풀기</label>
+							</div>
+							<div class="checkbox_type">
+								<input type="checkbox" id="check_es3">
+								<label for="check_es3">3달 안에 풀기</label>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form_control">
+						
+						<div class="form_control_item">
+							<strong>기간</strong>
+							<span class="form_control_datepicker">
+								<input type="text" id="prevMonthDatepicker">
+							</span>
+							<span class="ml10 mr10">~</span>
+							<span class="form_control_datepicker">
+								<input type="text" id="nextMonthDatepicker">
+							</span>
+						</div>
+						<div class="form_control_item">
+							<strong>공개 여부</strong>							
+							<div class="checkbox_type">
+								<input type="checkbox" id="reveal">
+								<label for="reveal">공개</label>
+							</div>
+							<div class="checkbox_type">
+								<input type="checkbox" id="private">
+								<label for="private">비공개</label>
+							</div>
+						</div>
+					</div>
+					<a href="" class="btn btn_ty7">검색</a>
+				</div>
+				<!-- /상세 버튼 클릭시 나오는 영역 -->
+
+				<!-- list count -->
+				<div class="btn_left_right clearFix mt25 mb10">
+					<p class="blr_left">
+						<strong class="total_lst_num">전체 132</strong>
+					</p>
+					<p class="blr_right">
+						<select name="">
+							<option value="">10개씩</option>
+							<option value="">20개씩</option>
+							<option value="">30개씩</option>                            
+							<option value="">40개씩</option>                            
+							<option value="">50개씩</option>                            
+						</select>      
+					</p>
+				</div>
+				<!-- /list count -->
+
+				<table class="tbl_list" summary="table list">
+					<caption>table list</caption>
+					<colgroup>
+						<col style="width:5%">
+						<col style="width:5%">
+						<col style="width:8%">
+						<col style="width:8%">
+						<col style="width:8%">
+						<col style="width:10%">
+						<col style="width:14%">
+						<col style="width:10%">
+						<col style="width:8%">
+						<col style="width:8%">
+						<col style="width:8%">
+						<col style="width:8%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="first"><input type="checkbox" class="all_check"></th>
+							<th scope="col">NO <i class="fa fa-sort-down"></i></th>
+							<th scope="col">학교급 <i class="fa fa-sort-down"></i></th>
+							<th scope="col">과목 <i class="fa fa-sort-down"></i></th>
+							<th scope="col">학년 <i class="fa fa-sort-down"></i></th>
+							<th scope="col">책 시리즈</th>								
+							<th scope="col">책명</th>
+							<th scope="col">학습 방법 <i class="fas fa-sort"></i></th>
+							<th scope="col">별포인트 <i class="fas fa-sort"></i></th>
+							<th scope="col">등록일 <i class="fas fa-sort"></i></th>
+							<th scope="col">수정일 <i class="fas fa-sort"></i></th>
+							<th scope="col">공개 여부 <i class="fas fa-sort"></i></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td scope="row" class="first"><input type="checkbox"></td>
+							<td>1</td>
+							<td>중등</td>
+							<td>수학</td>
+							<td>중1</td>
+							<td>체크체크 시리즈</td>
+							<td>체크체크 수학 1-1 본교재</td>
+							<td>1달 안에 풀기</td>
+							<td>40</td>
+							<td>2022-01-12</td>
+							<td>2022-01-13</td>
+							<td>공개</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first"><input type="checkbox"></td>
+							<td>2</td>
+							<td>중등</td>
+							<td>수학</td>
+							<td>중1</td>
+							<td>체크체크 시리즈</td>
+							<td>체크체크 수학 1-1 본교재</td>
+							<td>1달 안에 풀기</td>
+							<td>40</td>
+							<td>2022-01-12</td>
+							<td>2022-01-13</td>
+							<td>공개</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first"><input type="checkbox"></td>
+							<td>3</td>
+							<td>중등</td>
+							<td>수학</td>
+							<td>중1</td>
+							<td>체크체크 시리즈</td>
+							<td>체크체크 수학 1-1 본교재</td>
+							<td>1달 안에 풀기</td>
+							<td>40</td>
+							<td>2022-01-12</td>
+							<td>2022-01-13</td>
+							<td>공개</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first"><input type="checkbox"></td>
+							<td>4</td>
+							<td>중등</td>
+							<td>수학</td>
+							<td>중1</td>
+							<td>체크체크 시리즈</td>
+							<td>체크체크 수학 1-1 본교재</td>
+							<td>1달 안에 풀기</td>
+							<td>40</td>
+							<td>2022-01-12</td>
+							<td>2022-01-13</td>
+							<td>공개</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first"><input type="checkbox"></td>
+							<td>5</td>
+							<td>중등</td>
+							<td>수학</td>
+							<td>중1</td>
+							<td>체크체크 시리즈</td>
+							<td>체크체크 수학 1-1 본교재</td>
+							<td>1달 안에 풀기</td>
+							<td>40</td>
+							<td>2022-01-12</td>
+							<td>2022-01-13</td>
+							<td>공개</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first"><input type="checkbox"></td>
+							<td>6</td>
+							<td>중등</td>
+							<td>수학</td>
+							<td>중1</td>
+							<td>체크체크 시리즈</td>
+							<td>체크체크 수학 1-1 본교재</td>
+							<td>1달 안에 풀기</td>
+							<td>40</td>
+							<td>2022-01-12</td>
+							<td>2022-01-13</td>
+							<td>공개</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first"><input type="checkbox"></td>
+							<td>7</td>
+							<td>중등</td>
+							<td>수학</td>
+							<td>중1</td>
+							<td>체크체크 시리즈</td>
+							<td>체크체크 수학 1-1 본교재</td>
+							<td>1달 안에 풀기</td>
+							<td>40</td>
+							<td>2022-01-12</td>
+							<td>2022-01-13</td>
+							<td>공개</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first"><input type="checkbox"></td>
+							<td>8</td>
+							<td>중등</td>
+							<td>수학</td>
+							<td>중1</td>
+							<td>체크체크 시리즈</td>
+							<td>체크체크 수학 1-1 본교재</td>
+							<td>1달 안에 풀기</td>
+							<td>40</td>
+							<td>2022-01-12</td>
+							<td>2022-01-13</td>
+							<td>공개</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first"><input type="checkbox"></td>
+							<td>9</td>
+							<td>중등</td>
+							<td>수학</td>
+							<td>중1</td>
+							<td>체크체크 시리즈</td>
+							<td>체크체크 수학 1-1 본교재</td>
+							<td>1달 안에 풀기</td>
+							<td>40</td>
+							<td>2022-01-12</td>
+							<td>2022-01-13</td>
+							<td>공개</td>
+						</tr>
+						<tr>
+							<td scope="row" class="first"><input type="checkbox"></td>
+							<td>10</td>
+							<td>중등</td>
+							<td>수학</td>
+							<td>중1</td>
+							<td>체크체크 시리즈</td>
+							<td>체크체크 수학 1-1 본교재</td>
+							<td>1달 안에 풀기</td>
+							<td>40</td>
+							<td>2022-01-12</td>
+							<td>2022-01-13</td>
+							<td>공개</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<!-- paging -->
+				<div class="paging mt20">
+					<a href="javascript:void(0);" class="pprev">
+						<img src="../images/arrow_paging_pprev.png" alt="forefront">
+					</a>
+					<a href="javascript:void(0);" class="prev">
+						<img src="../images/arrow_paging_prev.png" alt="prev">
+					</a>					
+					<a href="javascript:void(0);" class="on">1</a>
+					<a href="javascript:void(0);">2</a>
+					<a href="javascript:void(0);">3</a>
+					<a href="javascript:void(0);">4</a>
+					<a href="javascript:void(0);">5</a>											
+					<a href="javascript:void(0);">6</a>											
+					<a href="javascript:void(0);">7</a>											
+					<a href="javascript:void(0);">8</a>											
+					<a href="javascript:void(0);">9</a>											
+					<a href="javascript:void(0);">10</a>											
+
+					<a href="javascript:void(0);" class="next">
+						<img src="../images/arrow_paging_next.png" alt="next">
+					</a>
+					<a href="javascript:void(0);" class="nnext">
+						<img src="../images/arrow_paging_nnext.png" alt="last">
+					</a>										
+				</div>
+				<!-- //paging -->
+
+				<!-- button -->	                    
+				<div class="btn_left_right clearFix mt10 mb10">						                        
+					<p class="blr_left">
+						<a class="btn btn_ty7" href="#">선택삭제</a>
+					</p>
+					<p class="blr_right">
+						<a class="btn btn_ty7" href="#">등록</a>
+					</p>
+				</div>
+				<!-- //button -->	                    
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

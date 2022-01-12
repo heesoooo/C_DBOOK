@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>개인정보처리방침관리_등록</title>
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="../css/webfonts/fontawesome.min.css"/>
+<link rel="stylesheet" href="../css/style.min.css">
+
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/admin.js"></script>
+</head>
+<body>	 
+	<div id="wrap">
+		<div class="container">
+			<!-- header -->
+			﻿<!-- title area -->
+			<div class="header_wrap">
+				<h1><img src="../images/logo.png" alt="천재교육"></h1>
+				<div class="user_service right">
+					<span class="unprocess">미처리 신고<a href="#">32</a></span>
+					<a href="#" class="btn_default btn_sky_blue right">Logout</a>						
+					
+					<p class="user_info">
+						<span class="user_name">admin</span> 님의 관리자 등급은 <strong>최고관리자</strong>입니다.
+					</p>
+				</div>
+			</div>
+			<!-- /title area -->
+
+			<!-- menu area -->
+			<nav class="gnb clearFix">
+				<ul>
+					<li rel="nav01" class="active"><a href="#">콘텐츠 관리</a></li>
+					<li rel="nav02"><a href="#">챌린지 관리</a></li>
+					<li rel="nav03"><a href="#">운영 관리</a></li>
+					<li rel="nav04"><a href="#">회원 관리</a></li>
+					<li rel="nav05"><a href="#">관리자 관리</a></li>
+					<li rel="nav06"><a href="#">통계</a></li>
+					<li rel="nav07"><a href="#">데이터베이스 관리</a></li>
+				</ul>
+			</nav>
+			<!-- /menu area -->
+
+			<script>
+				$(function(){
+					$(".gnb li").on("click", function(e){
+						e.preventDefault();
+						$(this).addClass("active").siblings().removeClass("active");
+						
+						// 개발작업시 삭제해주세요. ↓
+						var id = $(this).attr('rel');
+						$('#' + id).show().siblings('ul').hide();
+						
+						$(".menu_tree").hide();
+						$("#content").css("width", 1080);
+					});
+				});
+			</script>
+			<!-- /header -->
+			
+			<!-- lnb & location -->
+			﻿			<div class="lnb">
+				<ul id="nav01">
+					<li>
+						<a href="#">책관리</a>
+						<ul class="menu_tree">
+							<li>
+								<input type="checkbox" id="root">
+								<label for="root">책 관리</label>
+								<ul>
+									<li>
+										<input type="checkbox" id="node00">
+										<label for="node00">2015개정</label>
+										<ul>
+											<li>
+												<input type="checkbox" id="node00_1">
+												<label for="node00_1">초등</label>
+												<ul>
+													<li>
+														<input type="checkbox" id="node00_2">
+														<label for="node00_2" class="lastTree">수학</label>
+													</li>
+													<li>
+														<input type="checkbox" id="node00_3">
+														<label for="node00_3">중1수학</label>
+														<ul>
+															<li>
+																<input type="checkbox" id="node00_3_1">
+																<label for="node00_3_1" class="lastTree">체크체크 수학 1-1</label>
+															</li>
+															<li>
+																<input type="checkbox" id="node00_3_1">
+																<label for="node00_3_1" class="lastTree active">체크체크 수학 1-2</label>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<input type="checkbox" id="node2">
+										<label for="node2">9차</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">문항관리</a>
+						<ul class="menu_tree">
+							<li>
+								<input type="checkbox" id="root">
+								<label for="root">코드 관리</label>
+								<ul>
+									<li>
+										<input type="checkbox" id="node0">
+										<label for="node0">2015개정</label>
+										<ul>
+											<li>
+												<input type="checkbox" id="node0_1">
+												<label for="node0_1">초등</label>
+												<ul>
+													<li>
+														<input type="checkbox" id="node0_2">
+														<label for="node0_2" class="lastTree">수학</label>
+													</li>
+													<li>
+														<input type="checkbox" id="node0_3">
+														<label for="node0_3">중1수학</label>
+														<ul>
+															<li>
+																<input type="checkbox" id="node0_3_1">
+																<label for="node0_3_1" class="lastTree">체크체크 수학 1-1</label>
+															</li>
+															<li>
+																<input type="checkbox" id="node0_3_1">
+																<label for="node0_3_1" class="lastTree active">체크체크 수학 1-2</label>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<input type="checkbox" id="node2">
+										<label for="node2">9차</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">개념 관리</a></li>
+					<li><a href="#">책 상세 관리</a></li>
+				</ul>
+
+				<ul id="nav02">
+					<li><a href="#">챌린지 관리</a></li>
+				</ul>
+
+				<ul id="nav03">
+					<li><a href="#">응원 문구 관리</a></li>
+					<li><a href="#">팝업관리</a></li>
+					<li>
+						<a href="#">게시글 관리</a>
+						<ul class="depth_3">
+							<li><a href="#">신고 관리</a></li>
+						</ul>
+					</li>
+					<li><a href="#">금지어 관리</a></li>
+					<li><a href="#">공지 사항 관리</a></li>
+					<li><a href="#">자주 하는 질문</a></li>
+					<li><a href="#">이용약관 관리</a></li>
+					<li><a href="#">개인정보처리방침 관리</a></li>
+				</ul>
+
+				<ul id="nav04">
+					<li><a href="#">회원 관리</a></li>
+					<li><a href="#">휴먼 회원 관리</a></li>
+					<li><a href="#">제제 회원 관리</a></li>
+					<li><a href="#">탈퇴 회원 관리</a></li>
+				</ul>
+
+				<ul id="nav05">
+					<li><a href="#">관리자</a></li>
+					<li><a href="#">관리 기록</a></li>
+				</ul>
+
+				<ul id="nav06">
+					<li><a href="#">요약</a></li>
+					<li><a href="#">가입자 현황</a></li>
+					<li><a href="#">탈퇴자 현황</a></li>
+					<li><a href="#">접속자 현황</a></li>
+				</ul>
+
+				<ul id="nav07">
+					<li>
+						<a href="#">코드 관리</a>
+						<ul class="menu_tree">
+							<li>
+								<input type="checkbox" id="root">
+								<label for="root">코드 관리</label>
+								<ul>
+									<li>
+										<input type="checkbox" id="node1">
+										<label for="node1">2015개정</label>
+										<ul>
+											<li>
+												<input type="checkbox" id="node1_1">
+												<label for="node1_1">초등</label>
+												<ul>
+													<li>
+														<input type="checkbox" id="node1_2">
+														<label for="node1_2" class="lastTree">수학</label>
+													</li>
+													<li>
+														<input type="checkbox" id="node1_3">
+														<label for="node1_3">중1수학</label>
+														<ul>
+															<li>
+																<input type="checkbox" id="node1_3_1">
+																<label for="node1_3_1" class="lastTree">체크체크 수학 1-1</label>
+															</li>
+															<li>
+																<input type="checkbox" id="node1_3_1">
+																<label for="node1_3_1" class="lastTree active">체크체크 수학 1-2</label>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<input type="checkbox" id="node2">
+										<label for="node2">9차</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">카테고리 관리</a>
+						<ul class="menu_tree">
+							<li>
+								<input type="checkbox" id="root">
+								<label for="root">카테고리 관리</label>
+								<ul>
+									<li>
+										<input type="checkbox" id="node2">
+										<label for="node2">2015개정</label>
+										<ul>
+											<li>
+												<input type="checkbox" id="node2_1">
+												<label for="node2_1">초등</label>
+												<ul>
+													<li>
+														<input type="checkbox" id="node2_2">
+														<label for="node2_2" class="lastTree">수학</label>
+													</li>
+													<li>
+														<input type="checkbox" id="node2_3">
+														<label for="node2_3">중1수학</label>
+														<ul>
+															<li>
+																<input type="checkbox" id="node2_3_1">
+																<label for="node2_3_1" class="lastTree">체크체크 수학 1-1</label>
+															</li>
+															<li>
+																<input type="checkbox" id="node2_3_1">
+																<label for="node2_3_1" class="lastTree active">체크체크 수학 1-2</label>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<input type="checkbox" id="node2">
+										<label for="node2">9차</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">단원 관리</a>
+						<ul class="menu_tree">
+							<li>
+								<input type="checkbox" id="root">
+								<label for="root">단원 관리</label>
+								<ul>
+									<li>
+										<input type="checkbox" id="node3">
+										<label for="node3">2015개정</label>
+										<ul>
+											<li>
+												<input type="checkbox" id="node3_1">
+												<label for="node3_1">초등</label>
+												<ul>
+													<li>
+														<input type="checkbox" id="node3_2">
+														<label for="node3_2" class="lastTree">수학</label>
+													</li>
+													<li>
+														<input type="checkbox" id="node3_3">
+														<label for="node3_3">중1수학</label>
+														<ul>
+															<li>
+																<input type="checkbox" id="node3_3_1">
+																<label for="node3_3_1" class="lastTree">체크체크 수학 1-1</label>
+															</li>
+															<li>
+																<input type="checkbox" id="node3_3_1">
+																<label for="node3_3_1" class="lastTree active">체크체크 수학 1-2</label>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<input type="checkbox" id="node3">
+										<label for="node3">9차</label>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			
+			<!-- 컨텐츠 영역 -->
+			<div id="content">			
+
+				<!-- 
+					컨텐츠 내용은 여기서부터 
+				-->
+				
+				<!-- location -->
+				<div class="middle clearFix">
+					<ol>
+						<li>HOME</li>
+						<li>메뉴1</li>	
+						<li>메뉴2</li>											
+					</ol> 
+				</div>
+				<!-- /location -->
+			<!-- /lnb & location -->
+
+				<table class="tbl_view mt10 mb10">
+					<caption></caption>
+					<colgroup>
+						<col style="width:20%">
+						<col style="width:80%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">제목 <sup class="necessary">*</sup></th>
+							<td>
+								<input type="text" placeholder="제목을 입력하세요." style="width: 70%">
+								<p class="strength">제목을 입력하세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">파일 업로드 <sup class="necessary">*</sup></th>
+							<td>
+                                <input type="file">
+                                <p class="strength">
+                                    등록 가능한 확장자는 doc, docx, hwp입니다.<br>
+                                    파일을 등록해주세요.
+                                </p>
+                            </td>
+						</tr>
+						<tr>
+							<th scope="row">공개 여부</th>
+							<td>
+								<div class="radio_type">
+									<input type="radio" id="reveal" name="disclosure">
+									<label for="reveal">공개</label>
+								</div>
+								<div class="radio_type">
+									<input type="radio" id="private" name="disclosure" checked>
+									<label for="private">비공개</label>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+	
+				<!-- button -->
+				<div class="btn_right clearFix mt10 mb10">
+					<a class="btn btn_ty7" href="#">등록</a>
+					<a class="btn btn_ty7" href="#">취소</a>
+				</div>
+				<!-- //button -->	                    
+			</div>
+		</div>
+	</div>
+</body>
+</html>

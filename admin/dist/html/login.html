@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>로그인</title>
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="../css/webfonts/fontawesome.min.css"/>
+<link rel="stylesheet" href="../css/style.min.css">
+
+<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/admin.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<div class="login_area">
+			<h1><img src="../images/logo.png" alt="디북 Admin"></h1>
+
+			<div class="login_input_zone">
+				<label for="user_id">
+					<strong>아이디 <em class="necessary">*</em></strong>
+					<input type="text" id="user_id" placeholder="아이디를 입력해 주세요.">
+				</label>
+				<p class="error_message">아이디를 입력해주세요.</p>
+				
+				<label for="user_pw">
+					<strong>비밀번호 <em class="necessary">*</em></strong>
+					<input type="password" id="user_pw" placeholder="비밀번호를 입력해 주세요.">
+				</label>
+				<p class="error_message">
+					비밀번호를 입력해주세요.<br>
+					잘못된 비밀번호입니다. 다시 입력해주세요.
+				</p>
+			</div>
+			
+			<a href="#login" class="btn_login">
+				로그인
+			</a>		
+		</div>
+	</div>
+
+</body>
+</html>
